@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Empréstimos</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
+
+<h1>Empréstimos Cadastrados</h1>
+
+<div class="livro" th:each="emprestimo : ${emprestimos}">
+    <h3 th:text="${emprestimo.livro}"></h3>
+
+    <p>
+        <strong>Usuário:</strong>
+        <span th:text="${emprestimo.usuario}"></span>
+    </p>
+
+    <p>
+        <strong>Data do empréstimo:</strong>
+        <span th:text="${emprestimo.dataEmprestimo}"></span>
+    </p>
+
+    <p>
+        <strong>Data de devolução:</strong>
+        <span th:text="${emprestimo.dataDevolucao}"></span>
+    </p>
+</div>
+
+<a class="voltar" th:href="@{/livros}">
+    Voltar ao menu principal
+</a>
 
 </body>
 </html>

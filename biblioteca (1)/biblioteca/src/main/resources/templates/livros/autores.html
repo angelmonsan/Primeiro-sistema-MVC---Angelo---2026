@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Autores</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
+
+<h1>Autores Cadastrados</h1>
+
+<div class="livro" th:each="autor : ${autores}">
+    <h3 th:text="${autor.nome}"></h3>
+    <p>
+        <strong>Nacionalidade:</strong>
+        <span th:text="${autor.nacionalidade}"></span>
+    </p>
+</div>
+
+<a class="voltar" th:href="@{/livros}">
+    Voltar ao menu principal
+</a>
 
 </body>
 </html>
