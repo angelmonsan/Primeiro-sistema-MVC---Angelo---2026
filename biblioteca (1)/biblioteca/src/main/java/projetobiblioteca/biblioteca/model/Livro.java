@@ -1,11 +1,19 @@
 package projetobiblioteca.biblioteca.model;
 
 public class Livro {
+
     private String titulo;
     private String autor;
     private String isbn;
 
-    // getters e setters a seguir
+    public Livro() {
+    }
+
+    public Livro(String titulo, String autor, String isbn) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+    }
 
     public String getTitulo() {
         return titulo;

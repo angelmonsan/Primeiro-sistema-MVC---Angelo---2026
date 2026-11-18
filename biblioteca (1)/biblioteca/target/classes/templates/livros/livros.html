@@ -1,10 +1,34 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Informações do Livro</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
+
+<h1>Sistema de Biblioteca</h1>
+
+<h2>Informações do Livro</h2>
+
+<div class="livro">
+    <h3 th:text="${livro.titulo}">Título do Livro</h3>
+
+    <p>
+        <strong>Autor:</strong>
+        <span th:text="${livro.autor}"></span>
+    </p>
+
+    <p>
+        <strong>ISBN:</strong>
+        <span th:text="${livro.isbn}"></span>
+    </p>
+</div>
+
+<a class="voltar" th:href="@{/livros}">
+    Voltar ao menu principal
+</a>
 
 </body>
 </html>

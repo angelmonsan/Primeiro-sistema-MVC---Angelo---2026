@@ -1,13 +1,11 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5efe6;
     color: #4b3621;
     margin: 30px;
-
 }
 
-h1 {
+h1, h2 {
     color: #70452a;
 }
 
@@ -15,6 +13,7 @@ nav {
     background-color: #e8d8c3;
     padding: 15px;
     width: 220px;
+    border-radius: 8px;
 }
 
 nav ul {
@@ -29,9 +28,80 @@ nav li {
 nav a {
     color: #70452a;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
+    color: #a66b3f;
+    text-decoration: underline;
+}
+
+.livro {
+    background-color: #e8d8c3;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.livro h3 {
+    color: #70452a;
+}
+
+.formulario {
+    background-color: #e8d8c3;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.formulario input {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #b99b7b;
+    border-radius: 5px;
+}
+
+.botao, button {
+    display: inline-block;
+    background-color: #70452a;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover, button:hover {
+    background-color: #a66b3f;
+}
+
+.excluir {
+    background-color: #9b3d32;
+}
+
+.excluir:hover {
+    background-color: #762b24;
+}
+
+.voltar {
+    display: inline-block;
+    color: #70452a;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
     color: #a66b3f;
     text-decoration: underline;
 }
